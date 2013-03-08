@@ -1,0 +1,10 @@
+version 0.1
+1、SQL server数据库结构设计（类图，ER图与ORM由EF维护）；
+2、基本能用的界面；
+3、系统架构：SQL server、IIS（业务逻辑、验证权限、REST API）、jQuery UI；
+4、微博分享；
+5、产品：讲故事。
+6、代码托管GitHub；
+
+预期时间点：3.22左右再次讨论
+
