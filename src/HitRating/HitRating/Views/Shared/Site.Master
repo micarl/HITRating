@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html />
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="<%: Html.ParseCssUrl("Scripts/Css/common.css") %>" />
+        <script type="text/javascript" src="<%: Html.ParseJsUrl("Scripts/Js/jquery.js") %>"></script>
+        <script type="text/javascript" src="<%: Html.ParseJsUrl("Scripts/Js/jquery.common.js") %>"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="nav">
+                <a href="/" title="返回主页"><img id="logo" src="<%: Html.ParseImageUrl("Images/logo_mini.png") %>" alt="Tword" /></a>
+                <div class="nav_group">
+                    <input class="mini_search tip_search short_input" value="发现" action="" />
+                    <% 
+                        if (Page.User.Identity.IsAuthenticated)
+                        { 
+                    %>
+                            <a href="/Account/Manage" title="账户管理"><img id="header_photo" src="<%: (new HitRating.Models.AccountMembershipService()).GetPhotoUrl(Page.User.Identity.Name) %>" alt="<%: Page.User.Identity.Name %>" /></a>
+                    <%  
+                        }
+                        else
+                        {      
+                    %>
+                            <a id="header_logon" class="taction" object="Session" taction_type="1" title="登录" redirect_to="">登录</a>
+                            <a id="header_register" class="taction" object="Account" taction_type="1" title="注册" redirect_to="">注册</a>
+                    <%  
+                        } 
+                    %>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div id="main_content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+            
+            <div id="footer">
+                <p>Copyright 2012-2013 HIT-Rating.com | <a target="_blank" href="http://www.miibeian.gov.cn/">浙ICP备13004170号</a></p>
+            </div>
+        </div>
+
+        <div id="tpanels">
+            <% Html.RenderPartial("Panels"); %>
+        </div>
+    </body>
+</html>
