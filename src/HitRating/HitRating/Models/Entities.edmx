@@ -346,7 +346,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HitRatingModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="HitRatingEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="aspnet_Applications" EntityType="HitRatingModel.aspnet_Applications" />
           <EntitySet Name="aspnet_Membership" EntityType="HitRatingModel.aspnet_Membership" />
           <EntitySet Name="aspnet_Paths" EntityType="HitRatingModel.aspnet_Paths" />
@@ -620,7 +620,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="HitRatingModelStoreContainer" CdmEntityContainer="HitRatingEntities">
+        <EntityContainerMapping StorageEntityContainer="HitRatingModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="aspnet_Applications"><EntityTypeMapping TypeName="HitRatingModel.aspnet_Applications"><MappingFragment StoreEntitySet="aspnet_Applications">
             <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
             <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />

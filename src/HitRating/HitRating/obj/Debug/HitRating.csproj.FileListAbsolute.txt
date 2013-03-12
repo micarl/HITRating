@@ -1,0 +1,10 @@
+G:\HitRating\Source\HitRating\HitRating\obj\Debug\ResolveAssemblyReference.cache
+G:\HitRating\Source\HitRating\HitRating\bin\HitRating.dll
+G:\HitRating\Source\HitRating\HitRating\bin\HitRating.pdb
+G:\HitRating\Source\HitRating\HitRating\bin\System.Web.Mvc.dll
+G:\HitRating\Source\HitRating\HitRating\bin\System.Web.Mvc.xml
+G:\HitRating\Source\HitRating\HitRating\bin\zh-Hans\System.Web.Mvc.resources.dll
+G:\HitRating\Source\HitRating\HitRating\obj\Debug\HitRating.dll
+G:\HitRating\Source\HitRating\HitRating\obj\Debug\HitRating.pdb
+G:\HitRating\Source\HitRating\HitRating\bin\App_Data\HitRating.mdf
+G:\HitRating\Source\HitRating\HitRating\bin\App_Data\HitRating_log.ldf

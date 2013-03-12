@@ -95,9 +95,12 @@
     <Compile Include="Utitlities\Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\HitRating.mdf" />
+    <Content Include="App_Data\HitRating.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\HitRating_log.ldf">
       <DependentUpon>HitRating.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Images\default_photo.jpg" />
@@ -112,13 +115,6 @@
     <Content Include="Views\Account\Manage.aspx" />
     <Content Include="Views\Account\Home.aspx" />
     <Content Include="Views\Shared\Panels.ascx" />
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
     <Content Include="Views\Home\About.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Shared\Site.Master" />
@@ -130,7 +126,9 @@
       <LastGenOutput>Entities.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

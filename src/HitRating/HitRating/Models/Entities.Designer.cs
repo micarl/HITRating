@@ -43,27 +43,27 @@ namespace HitRating.Models
         #region 构造函数
     
         /// <summary>
-        /// 请使用应用程序配置文件的“HitRatingEntities”部分中的连接字符串初始化新 HitRatingEntities 对象。
+        /// 请使用应用程序配置文件的“Entities”部分中的连接字符串初始化新 Entities 对象。
         /// </summary>
-        public Entities() : base("name=HitRatingEntities", "HitRatingEntities")
+        public Entities() : base("name=Entities", "Entities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// 初始化新的 HitRatingEntities 对象。
+        /// 初始化新的 Entities 对象。
         /// </summary>
-        public Entities(string connectionString) : base(connectionString, "HitRatingEntities")
+        public Entities(string connectionString) : base(connectionString, "Entities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// 初始化新的 HitRatingEntities 对象。
+        /// 初始化新的 Entities 对象。
         /// </summary>
-        public Entities(EntityConnection connection) : base(connection, "HitRatingEntities")
+        public Entities(EntityConnection connection) : base(connection, "Entities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
